@@ -7,11 +7,14 @@ public class ScoreController : MonoBehaviour
 {
     public TMP_Text score;
     public TMP_Text missing;
-    public ScoreManager manager;
+    public TMP_Text waves;
+
+    public ScoreManager scoreManager;
 
     private void Update()
     {
-        score.text = "Score: " + manager.playerScore.ToString();
-        missing.text = "Missing: " + manager.playerMissing.ToString();
+        score.text = "Score: " + scoreManager.playerScore.ToString();
+        missing.text = "Missing: " + scoreManager.playerMissing.ToString();
+        waves.text = "Waves: " + scoreManager.wavesResult.ToString();
     }
 }

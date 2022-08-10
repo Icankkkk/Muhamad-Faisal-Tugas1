@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject[] enemy;
     public float spawnTime = 2f;
 
     // Start is called before the first frame update
@@ -16,6 +16,10 @@ public class EnemyManager : MonoBehaviour
 
     void Spawn()
     {
-        Instantiate(enemy);
+
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            Instantiate(enemy[i]);
+        }
     }
 }

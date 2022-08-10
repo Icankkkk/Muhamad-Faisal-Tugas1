@@ -6,7 +6,8 @@ public class ScoreManager : MonoBehaviour
 {
     public int playerScore;
     public int playerMissing;
-
+    public int wavesScore;
+    public int wavesResult;
 
     public void addScore(int i)
     {
@@ -17,5 +18,16 @@ public class ScoreManager : MonoBehaviour
     {
         playerMissing += i;
     } 
+
+    public void wavesSystem(int i)
+    {
+        if (wavesScore == 10)
+        {
+            wavesScore = 0;
+            wavesResult += i;
+        } else {
+            wavesScore += i;
+        }
+    }
     
 }
