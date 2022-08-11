@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy:
-  - {fileID: 6408098922386492161, guid: ddaee6936e5a663448fbb2e615a29e97, type: 3}
   - {fileID: 6408098922386492161, guid: f237b7ad70ea63c448c5865618c1dece, type: 3}
+  - {fileID: 6408098922386492161, guid: ddaee6936e5a663448fbb2e615a29e97, type: 3}
   spawnTime: 2
 --- !u!4 &56399064
 Transform:
@@ -390,6 +390,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306276752}
   m_CullTransparentMesh: 1
+--- !u!1 &400768513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400768515}
+  - component: {fileID: 400768514}
+  m_Layer: 0
+  m_Name: Score Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &400768514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400768513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf9f271a1f2a6146a71b5ddcd884e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScore: 0
+  playerMissing: 0
+  wavesScore: 0
+  wavesResult: 0
+--- !u!4 &400768515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400768513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3018449, y: -0.8658842, z: -0.017571896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,10 +736,10 @@ GameObject:
   - component: {fileID: 858883416}
   - component: {fileID: 858883415}
   - component: {fileID: 858883414}
-  - component: {fileID: 858883418}
+  - component: {fileID: 858883417}
   m_Layer: 0
   m_Name: block down
-  m_TagString: Untagged
+  m_TagString: WallDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -764,7 +812,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -789,7 +837,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &858883418
+--- !u!114 &858883417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -798,10 +846,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 858883413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc366a7645b51643855c5d285ea5f70, type: 3}
+  m_Script: {fileID: 11500000, guid: 0acc5454975ff42429896b927d131a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 1898567647}
+  scoreManager: {fileID: 400768514}
 --- !u!1 &902550627
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8892bd1091c2f3443afe28b1645f7533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 1898567647}
+  scoreManager: {fileID: 400768514}
 --- !u!4 &902550629
 Transform:
   m_ObjectHideFlags: 0
@@ -845,7 +893,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1397088542
 GameObject:
@@ -963,10 +1011,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f267eeba33b6a147b4c41667020f11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 400768514}
   score: {fileID: 306276754}
   missing: {fileID: 786990571}
   waves: {fileID: 1677187262}
-  scoreManager: {fileID: 1898567647}
 --- !u!1 &1677187260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1164,7 @@ GameObject:
   - component: {fileID: 1892269812}
   m_Layer: 0
   m_Name: block up
-  m_TagString: Untagged
+  m_TagString: WallUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1189,7 +1237,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6509804}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1226,52 +1274,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfaa0e3c1bda2414980ffe17489a9a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 1898567647}
---- !u!1 &1898567646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1898567648}
-  - component: {fileID: 1898567647}
-  m_Layer: 0
-  m_Name: Score Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1898567647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898567646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf9f271a1f2a6146a71b5ddcd884e4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: 0
-  playerMissing: 0
-  wavesScore: 0
-  wavesResult: 2
---- !u!4 &1898567648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898567646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1584737, y: -0.501485, z: -0.042559326}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  scoreManager: {fileID: 400768514}
