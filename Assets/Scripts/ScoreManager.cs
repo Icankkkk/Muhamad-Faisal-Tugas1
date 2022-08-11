@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -9,17 +7,17 @@ public class ScoreManager : MonoBehaviour
     public int wavesScore;
     public int wavesResult;
 
-    public void addScore(int i)
+    public void AddScore(int i)
     {
         playerScore += i;  
     }
 
-    public void missingScore(int i)
+    public void MissingScore(int i)
     {
-        playerMissing += i;
+        playerMissing +=i;
     } 
 
-    public void wavesSystem(int i)
+    public void WavesSystem(int i)
     {
         if (wavesScore == 10)
         {
