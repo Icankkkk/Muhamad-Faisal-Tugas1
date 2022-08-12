@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MissingDetector : MonoBehaviour
 {
-    [SerializeField] private ScoreManager scoreManager;
+    private  ScoreManager scoreManager;
+  
+    private void Start()
+    {
+        scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
